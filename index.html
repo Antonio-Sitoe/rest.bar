@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest.bar - encontre todos os pratos do pais e de fora </title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="header-navigation">
+        <a href="index.html" class="logo">
+          <img src="img/logo.svg" alt="logo" class="logo-img">
+        </a>
+        <ul class="header-list">
+          <li><a href="index.html">Pratos do dia</a></li>
+          <li><a href="about.html">SOBRE NÓS</a></li>
+        </ul>
+        <button class="btn-mobile"></button>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const btn = document.querySelector(".btn-mobile");
+    const header = document.querySelector(".header-list");
+
+    btn.addEventListener('click', function () {
+      this.classList.toggle('ative')
+      header.classList.toggle('ative')
+    })
+  </script>
+
+
+
+
+  <main class="main"></main>
+  <footer class="footer"></footer>
+
+
+</body>
+
+</html>
