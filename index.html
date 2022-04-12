@@ -26,15 +26,7 @@
     </div>
   </header>
 
-  <script>
-    const btn = document.querySelector(".btn-mobile");
-    const header = document.querySelector(".header-list");
 
-    btn.addEventListener('click', function () {
-      this.classList.toggle('ative')
-      header.classList.toggle('ative')
-    })
-  </script>
 
   <main class="main">
     <div class="container">
@@ -43,7 +35,7 @@
           <img src="img/filter.png" alt="filtro">
           Filtros
         </span>
-        <h2 class="mainTitle">
+        <h2 class="mainTitle" data-title>
           Os Melhores Pratos do pais e de fora</h2>
       </div>
 
@@ -99,96 +91,20 @@
                   <span>★★★★★</span></p>
               </div>
             </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
-            <li class="content-item">
-              <img src="https://foodadvisor-api.strapi.io/uploads/bdb95ff372e0430d9789b6acbcddff5b.jpeg"
-                alt="foto do prato" class="content-img">
-              <div class="content-info">
-                <h4 class="content-info-h4">
-                  <span class="content-info-title">Caril de camarao</span>
-                  <span class="content-info-price">200 MT</span>
-                </h4>
-                <p>Categoria: <span class="content-info-category">Sul</span>
-                  <span>★★★★★</span></p>
-              </div>
-            </li>
           </ul>
         </section>
 
       </div>
     </div>
   </main>
+
+  <section class="loading" data-loading>
+    <div>
+      <div class="loadingElement"></div>
+      <p>Buscando os dados</p>
+    </div>
+
+  </section>
 
   <footer class="footer">
     <div class="container">
@@ -223,13 +139,39 @@
             <input type="email" name="email" placeholder="Digite o seu email favorito" required>
             <button type="submit">➤</button>
           </form>
-
         </div>
-
       </div>
     </div>
   </footer>
 
 
+  <div class="modal-bg">
+    <div class="modal">
+      <div class="modal-bg-image"></div>
+      <div class="modal-content">
+
+        <h1 class="mainTitle">Faca a sua reserva</h1>
+        <div class="content-info">
+          <h4 class="content-info-h4">
+            <span class="content-info-title">Caril de camarao</span>
+            <span class="content-info-price">200 MT</span>
+          </h4>
+          <p>Categoria: <span class="content-info-category">Sul</span>
+            <span>★★★★★</span></p>
+        </div>
+        <form action="https://formsubmit.co/antoniositoehl@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Digite o seu nome" required>
+          <input type="email" name="email" placeholder="Digite o seu email" required>
+          <input type="number" name="numero" placeholder="Digite o seu numero" required>
+          <button>Fazer reserva</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
+
 </html>

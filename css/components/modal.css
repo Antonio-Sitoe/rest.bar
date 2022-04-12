@@ -1,0 +1,93 @@
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-bg.ative {
+  display: flex;
+}
+
+.modal {
+  max-width: 900px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  opacity: 0;
+  transform: scale(0.4);
+  margin: 0.6rem;
+  animation: 0.3s scale forwards;
+}
+
+@keyframes scale {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.modal-bg-image {
+  background: url('../../img/bg-img.jpg') no-repeat center center;
+  height: 500px;
+  background-size: cover;
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.modal-content .content-info {
+  padding-top: 1rem;
+}
+
+.modal-content form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.modal-content form input,
+button {
+  padding: 0.6rem;
+}
+
+.modal-content form input {
+  outline: none;
+  border: 1px solid whitesmoke;
+}
+
+.modal-content form input:focus,
+.modal-content form input:hover {
+  border: 1px solid var(--color-blue);
+}
+
+.modal-content form button {
+  border: none;
+  background: var(--color-blue);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    padding: 0.5rem 2rem;
+  }
+
+  .modal-bg-image {
+    height: 80px;
+  }
+  .modal-content form {
+    margin-top: 0;
+  }
+}

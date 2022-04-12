@@ -2,7 +2,13 @@
  frontend do site rest.bar
 
 
- [] header
- [] footer 
+ [x] header
+ [x] footer 
+ [x] main
 
- [] main
+ [x] fazer a busca de dados
+
+[] montar a interface
+      [] verificar se o erro e string  tratar como se fosse string
+      -   [] tratar os erros 
+      [] se for array [] montar a interface

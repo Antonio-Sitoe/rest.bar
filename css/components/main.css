@@ -1,4 +1,5 @@
 .main {
+  display: none;
   margin: 2rem 0;
   padding: 1rem;
 }
@@ -91,6 +92,22 @@
 
   .main-category {
     border: none;
+    display: none;
+  }
+  .main-category.ative {
+    display: block;
+    animation: 0.3s animeLeft;
+  }
+
+  @keyframes animeLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: initial;
+    }
   }
 
   .spaced {
