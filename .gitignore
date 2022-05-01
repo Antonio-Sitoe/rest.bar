@@ -1,0 +1,4 @@
+
+*.md
+README.md
+scripts/modules/components/ComponentError.js
